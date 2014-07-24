@@ -14,7 +14,7 @@ setup(
     name='django-pico',
     version='0.0.1',
     packages=['djpico'],
-    install_requires=['pico >= 1.2.1', 'django'],
+    install_requires=['pico >= 1.4.0', 'django'],
     include_package_data=True,
     license='BSD License',
     description='A Django wrapper for the Pico web app framework',

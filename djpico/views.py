@@ -9,7 +9,7 @@ def index(request):
     params.update(request.GET.dict())
     params.update(request.POST.dict())
     path = '/' + request.path.split('/pico/')[-1]
-    pico_response = pico.server.handle_api_v2(path, params)
+    pico_response = pico.server.handle_api_v2(path, params, request)
     response = HttpResponse(pico_response.output)
     for key, header in pico_response.headers:
         response[key] = header

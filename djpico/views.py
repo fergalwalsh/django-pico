@@ -1,6 +1,9 @@
 import pico.server
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.conf import settings
+
+pico.server.DEBUG = settings.DEBUG
 
 
 @csrf_exempt

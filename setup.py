@@ -1,18 +1,16 @@
 import os
 from setuptools import setup
 
-import djpico
-
 README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
-version = djpico.__version__
+version = '0.0.3'
 
 setup(
     name='django-pico',
-    version='0.0.1',
+    version=version,
     packages=['djpico'],
     install_requires=['pico >= 1.4.0', 'django'],
     include_package_data=True,

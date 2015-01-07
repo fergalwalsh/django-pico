@@ -18,8 +18,6 @@ def index(request):
         pico_response = pico.server.handle_api_v2(path, params, request)
     except PicoError, e:
         pico_response = e.response
-    except Exception, e:
-        pico_response = pico.server.generate_exception_report(e, path, params)
     code, reason = pico_response.status.split(' ', 1)
     response = HttpResponse(pico_response.output,
                             status=int(code),
